@@ -27,18 +27,18 @@ While achieving 100% method and statement coverage is beneficial, it does not el
 ### 2c
 In the default tests, many classes were uncovered, such as DemoMain. Not every possible branch is being tested.
 
-![alt text](/images/all.png)
+![alt text](images/all.png)
 
 Foccusing on BoundedSetOfNaturals, there should be tests for the following methods:
 - `intersects`
 - `fromArray`
 - `add` : more coverage on the different cases
 
-![alt text](/images/Bounded1.png)
+![alt text](images/Bounded1.png)
 
 After adding tests for the above methods, the coverage is higher. The only methods that are not fully tested are the equals and hashcode, both generated.
 
-![alt text](/images/Bounded2.png)
+![alt text](images/Bounded2.png)
 
 
 
