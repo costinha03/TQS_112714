@@ -26,6 +26,7 @@ class StackTests {
     @DisplayName("Test pop method")
     @Test
     void testPop() {
+        assertThrows(IndexOutOfBoundsException.class, stack::pop);
         stack.push(1);
         stack.push(2);
         stack.push(3);
@@ -94,6 +95,24 @@ class StackTests {
         assertEquals(1, boundedStack.pop());
         assertEquals(0, boundedStack.size());
     }
+
+    @DisplayName("Test popTopN method")
+    @Test
+    void testPopTopN() {
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+
+        assertEquals(5, stack.popTopN(1)); // Remove o primeiro elemento do topo
+        assertEquals(3, stack.popTopN(2)); // Remove os dois próximos e retorna o terceiro
+        assertEquals(1, stack.popTopN(2)); // Remove os últimos dois e retorna o último
+
+        assertTrue(stack.isEmpty()); // A pilha deve estar vazia
+        assertThrows(IndexOutOfBoundsException.class, () -> stack.popTopN(1)); // Testa exceção ao tentar remover de pilha vazia
+    }
+
 
 
 

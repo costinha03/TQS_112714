@@ -30,6 +30,17 @@ public class Stack {
         }
         return stack.get(top);
     }
+    public Integer popTopN(int n) {
+        if (n <= 0 || n > size()) {
+            throw new IndexOutOfBoundsException("Invalid value for n: " + n);
+        }
+
+        Integer top = null;
+        for (int i = 0; i < n; i++) {
+            top = pop();
+        }
+        return top;
+    }
 
 
     public boolean isEmpty() {
