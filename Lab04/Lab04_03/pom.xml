@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>TQS.Lab04</groupId>
-  <artifactId>Lab04_01</artifactId>
+  <groupId>TQS</groupId>
+  <artifactId>Lab04_04</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Lab04_01</name>
+  <name>Lab04_04</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -57,12 +57,12 @@
     </dependency>
   </dependencies>
   <build>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-surefire-plugin</artifactId>
-      <version>${maven-surefire-plugin.version}</version>
-    </plugin>
-  </plugins>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven-surefire-plugin.version}</version>
+      </plugin>
+    </plugins>
   </build>
 </project>
