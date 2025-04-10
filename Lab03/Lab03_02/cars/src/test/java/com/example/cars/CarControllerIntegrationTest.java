@@ -19,15 +19,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.TestPropertySource;
 
-import com.example.cars.controller.CarsController;
 import com.example.cars.object.Car;
 import com.example.cars.repository.CarRepository;
-import com.example.cars.service.CarManagerService;
+
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @TestPropertySource(locations = "classpath:application-integrationtest.properties")
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-public class CarControllerIntegrationTest {
+class CarControllerIntegrationTest {
 
     @LocalServerPort
     private int randomServerPort;

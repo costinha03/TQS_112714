@@ -9,13 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
-import com.example.cars.controller.CarsController;
+
 import com.example.cars.object.Car;
 import com.example.cars.repository.CarRepository;
-import com.example.cars.service.CarManagerService;
+
 
 @DataJpaTest
-public class CarsRepositoryTest {
+class CarsRepositoryTest {
 
     @Autowired
     private TestEntityManager testEntityManager;
@@ -25,7 +25,7 @@ public class CarsRepositoryTest {
 
 
     @Test
-    public void testFindCarById(){
+    void testFindCarById(){
         Car car = new Car("Mercedes","SLK200");
 
         testEntityManager.persistAndFlush(car);
@@ -39,7 +39,7 @@ public class CarsRepositoryTest {
     }
 
     @Test
-    public void testFindCarByIdNull(){
+    void testFindCarByIdNull(){
         
         Car foundCar = carRepository.findByCarId(54L);
 
@@ -48,7 +48,7 @@ public class CarsRepositoryTest {
 
 
     @Test
-    public void testFindAllCars(){
+    void testFindAllCars(){
         Car car1 = new Car("Mercedes","SLK200");
         Car car2 = new Car("Honda", "CRV");
         Car car3 = new Car ("Toyota", "Hilux");

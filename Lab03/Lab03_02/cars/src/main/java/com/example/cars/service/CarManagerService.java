@@ -11,8 +11,11 @@ import com.example.cars.repository.CarRepository;
 
 @Service
 public class CarManagerService {
+    private final CarRepository carRepository;
     @Autowired
-    private CarRepository carRepository;
+    public CarManagerService(CarRepository carRepository) {
+        this.carRepository = carRepository;
+    }
 
     public Car save(Car car) {
         return carRepository.save(car);

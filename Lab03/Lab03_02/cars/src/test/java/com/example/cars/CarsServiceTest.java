@@ -3,9 +3,9 @@ package com.example.cars;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import java.util.Arrays;
+
 import java.util.List;
-import java.util.Optional;
+
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,14 +18,14 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-import com.example.cars.controller.CarsController;
+
 import com.example.cars.object.Car;
 import com.example.cars.repository.CarRepository;
 import com.example.cars.service.CarManagerService;
 
 @ExtendWith(MockitoExtension.class)
-public class CarsServiceTest {
-    
+class CarsServiceTest {
+
     @Mock(lenient = true)
     private CarRepository carRepository;
 
@@ -33,7 +33,7 @@ public class CarsServiceTest {
     private CarManagerService carService;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         // Criando carros mockados com segmentos e tipos de motor
         Car car1 = new Car("Mercedes", "SLK200");
         car1.setCarId(1L);
@@ -60,7 +60,7 @@ public class CarsServiceTest {
     }
 
     @Test
-    public void testFindReplacementCar() {
+     void testFindReplacementCar() {
         // Criando um carro de exemplo (Mercedes)
         Car originalCar = new Car("Mercedes", "SLK200");
         originalCar.setCarId(1L);
@@ -77,21 +77,21 @@ public class CarsServiceTest {
     }
 
     @Test
-    public void testCarDetailsValid() {
+     void testCarDetailsValid() {
         Car carToBeFound = carService.getCarDetails(1L);
 
         assertThat(carToBeFound.getMake()).isEqualTo("Mercedes");
     }
 
     @Test
-    public void testGetCarDetailsWrong() {
+     void testGetCarDetailsWrong() {
         Car carToBeFound = carService.getCarDetails(54L);
 
         assertThat(carToBeFound).isNull();
     }
 
     @Test
-    public void testGetAllCars() {
+     void testGetAllCars() {
         List<Car> cars = carService.getAllCars();
 
         assertThat(cars).hasSize(3).extracting(Car::getMake).contains("Mercedes", "BMW", "Toyota");

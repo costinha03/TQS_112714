@@ -8,6 +8,7 @@ class CarsApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// This method is intentionally left empty to allow the Spring Boot test framework to load the application context.
 	}
 
 }
