@@ -26,7 +26,7 @@ Through these tests, we aimed to gain insights into the system's behavior under 
 
 ## Exercise 1
 
-![Test 1 Results](/Pictures/Ex01.png)
+![Test 1 Results](./Pictures/Ex01.png)
 
 **API Call Duration**:
 - Average: 195.21 ms
@@ -44,7 +44,7 @@ Through these tests, we aimed to gain insights into the system's behavior under 
 Load test scenarios using k6 with a predefined traffic evolution pattern, allowing us to simulate and analyze the system's performance under varying load conditions.
 
 ### 2a: Ramp up from 0 to 20 virtual users (VUs) over 5 seconds, maintain 20 VUs for 10 seconds, and then ramp down to 0 VUs over the next 5 seconds
-![Test Results](/Pictures/Ex02a.png)
+![Test Results](./Pictures/Ex02a.png)
 **API Call Duration**:
 - Average: 151.4 ms
 - Minimum: 151.4 ms
@@ -68,8 +68,8 @@ In these exercises, we implemented a more comprehensive load test scenario with 
 
 #### Performance Metrics
 
-![Dashboard Results](/Pictures/Ex2cd.png)
-![Command line Results](/Pictures/Ex2cd_.png)
+![Dashboard Results](./Pictures/Ex2cd.png)
+![Command line Results](./Pictures/Ex2cd_.png)
 
 **API Call Duration**:
 - Average: 295.37 ms
@@ -94,8 +94,8 @@ The test was configured with specific thresholds:
 
 ### 2d and 2e: 120 VUs
 
-![Dashboard Results](/Pictures/checks2.png)
-![Command line Results](/Pictures/checks1.png)
+![Dashboard Results](./Pictures/checks2.png)
+![Command line Results](./Pictures/checks1.png)
 **API Call Duration**:
 - Average: 981.8 ms
 - Minimum: 27.26 ms
@@ -121,7 +121,7 @@ When increasing the load from 20 to 120 Virtual Users (VUs), the system experien
 The results indicate that the application's performance degrades significantly under increased user load, suggesting potential scalability issues that would need further investigation and optimization.
 - - - 
 ### 2f
-![Prometheus](/Pictures/2f.png)
+![Prometheus](./Pictures/2f.png)
 **API Call Duration**:
 - Average:1.5 s
 - Peak: > 1.5 s
